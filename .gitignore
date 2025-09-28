@@ -1,0 +1,241 @@
+######################################
+# GLOBAL IGNORE
+######################################
+
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Icon?
+*.log
+*.tmp
+*.swp
+*.bak
+*.old
+*.orig
+*~
+~$*
+*.swo
+*.swn
+backup/
+
+######################################
+# MARKDOWN / DOCUMENTATION
+######################################
+
+*.md.html
+_site/
+*.md.pdf
+*.md.docx
+
+######################################
+# BASH / SHELL
+######################################
+
+*.sh~
+*.bash_history
+*.bash_profile
+*.bashrc
+*.zshrc
+.profile
+.envrc
+
+######################################
+# .NET / ASP.NET Core / .NET 8
+######################################
+
+## User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.userprefs
+
+## Build results
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Dd]ebug*/
+[Rr]elease*/
+artifacts/
+project.lock.json
+project.fragment.lock.json
+*.pidb
+*.svclog
+
+## VS folders
+.vs/
+.idea/
+*.sln.iml
+.vscode/
+
+## LaunchSettings
+**/Properties/launchSettings.json
+
+## Test Results
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+
+## Publish Output
+publish/
+*.pubxml
+*.publishproj
+*.azurePubxml
+*.pfx
+
+## NuGet
+*.nupkg
+**/packages/*
+!**/packages/build/
+*.nuget.props
+*.nuget.targets
+
+## Rider / Resharper / JetBrains
+_ReSharper*/
+*.DotSettings.user
+
+## Other IDEs
+*.tmproj
+*.code-workspace
+
+######################################
+# NODE / NEXT.JS / VERCEL
+######################################
+
+# dependencies
+node_modules/
+.pnp/
+.pnp.js
+
+# build outputs
+.next/
+out/
+build/
+
+# testing
+/coverage
+
+# Vercel
+.vercel/
+
+# environment
+.env
+.env*.local
+next-env.d.ts
+*.tsbuildinfo
+
+# debug logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+######################################
+# PYTHON
+######################################
+
+# Bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / Packaging
+.Python
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py.cover
+.pytest_cache/
+.hypothesis/
+
+# Translations
+*.mo
+*.pot
+
+# Django
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Flask
+instance/
+.webassets-cache
+
+# Scrapy
+.scrapy
+
+# Sphinx
+docs/_build/
+
+# PyBuilder
+.pybuilder/
+target/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IPython
+profile_default/
+ipython_config.py
+
+# Virtualenv / pyenv
+.venv/
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+.pdm-python
+.pdm-build/
+.pixi
+__pypackages__/
+
+# Poetry / Pipenv / PDM / Pixi / UV
+# poetry.lock
+# Pipfile.lock
+# pdm.lock
+# uv.lock
+# pixi.lock
+
+# Type checkers
+.mypy_cache/
+.dmypy.json
+.pyre/
+.pytype/
+
+# Ruff / Linters
+.ruff_cache/
+
+# PyCharm / IDEs
+*.iml
+.spyproject
+.ropeproject

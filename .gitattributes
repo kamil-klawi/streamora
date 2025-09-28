@@ -1,0 +1,75 @@
+* text=auto
+
+*.bat text eol=crlf
+*.cs text eol=lf
+*.conf text eol=lf
+*.cpp text eol=lf
+*.css text eol=lf
+*.csv text eol=lf
+*.html text eol=lf
+*.js text eol=lf
+*.jsx text eol=lf
+*.json text eol=lf
+*.md text eol=lf
+*.mdx text eol=lf
+*.ts text eol=lf
+*.tsx text eol=lf
+*.scss text eol=lf
+*.sh text eol=lf
+*.py text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+
+*.png binary
+*.jpg binary
+*.jpge binary
+*.gif binary
+*.ico binary
+*.pdf binary
+*.eot binary
+*.ttf binary
+*.woff binary
+*.woff2 binary
+*.otf binary
+*.mp4 binary
+*.mov binary
+
+.gitallowed export-ignore
+.gitattributes export-ignore
+.gitignore export-ignore
+.gitmodules export-ignore
+.github/ export-ignore
+
+.idea/ export-ignore
+.vscode/ export-ignore
+.devcontainer/ export-ignore
+
+docker/backend/Dockerfile export-ignore
+docker/backend/dev/Dockerfile export-ignore
+docker/frontend/Dockerfile export-ignore
+docker/frontend/dev/Dockerfile export-ignore
+docker/proxy/Dockerfile export-ignore
+docker/proxy/dev/Dockerfile export-ignore
+docker/.dockerignore export-ignore
+docker/.env export-ignore
+docker/.env.example export-ignore
+docker/.env.development export-ignore
+docker/.env.test export-ignore
+docker/compose.yml export-ignore
+docker/compose.override.yml export-ignore
+
+docs/*.md export-ignore
+docs/*.mdx export-ignore
+*.md export-ignore
+*.mdx export-ignore
+
+frontend/eslint.config.js export-ignore
+frontend/prettier.config.js export-ignore
+frontend/stylelint.config.js export-ignore
+frontend/tests/ export-ignore
+
+.env export-ignore
+.env.example export-ignore
+.env.development export-ignore
+.env.production export-ignore
+.env.test export-ignore
