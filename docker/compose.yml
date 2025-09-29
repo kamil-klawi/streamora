@@ -1,0 +1,62 @@
+services:
+  auth-service:
+    build:
+      context: ../
+      dockerfile: docker/auth-service/Dockerfile
+    container_name: streamora-auth-service
+    ports:
+      - "5001:5001"
+    depends_on:
+      - postgres
+    networks:
+      - streamora-backend-network
+
+  users-service:
+    build:
+      context: ../
+      dockerfile: docker/users-service/Dockerfile
+    container_name: streamora-users-service
+    ports:
+      - "5002:5002"
+    depends_on:
+      - postgres
+    networks:
+      - streamora-backend-network
+
+  api-gateway:
+    build:
+      context: ../
+      dockerfile: docker/api-gateway/Dockerfile
+    container_name: streamora-api-gateway
+    ports:
+      - "5000:5000"
+    depends_on:
+      - auth-service
+      - users-service
+    networks:
+      - streamora-backend-network
+
+  postgres:
+    image: postgres:17
+    container_name: streamora-db
+    restart: unless-stopped
+    environment:
+      - POSTGRES_USER=${DB_USERNAME}
+      - POSTGRES_PASSWORD=${DB_PASSWORD}
+      - POSTGRES_DB=${DB_NAME}
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ../scripts/init-multi-dbs.sh:/docker-entrypoint-initdb.d/init-multi-dbs.sh:ro
+    networks:
+      - streamora-backend-network
+
+volumes:
+  postgres_data:
+
+networks:
+  streamora-backend-network:
+    driver: bridge
+  streamora-frontend-network:
+    driver: bridge
