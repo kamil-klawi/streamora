@@ -6,9 +6,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/)
 
 ## [Unreleased]
 
+## [v0.1.0] - 2025-09-29
+
 ### Added
-- Added `apps/` directory containing backend services.
-- Added `docker/` directory with Dockerfiles and docker-compose configuration files.
+- Added `apps/` directory containing templates for backend services such as AuthService, UsersService and ApiGateway.
+- Added `docker/` directory with Dockerfiles and docker-compose configuration files for the Auth and Users services.
+- Added `start`, `stop`, `cleanup` and `init-multi-dbs` scripts.
+- Added `start`, `stop` and `cleanup` commands to the Makefile.
+- Added initial proxy configuration for the API Gateway.
 
 ## [v0.0.1] - 2025-09-28
 
