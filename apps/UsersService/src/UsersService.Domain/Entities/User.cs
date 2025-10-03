@@ -24,5 +24,27 @@ namespace UsersService.Domain.Entities
             CreatedAt = DateTime.UtcNow;
             UpdatedAt = DateTime.UtcNow;
         }
+
+        public void UpdatePersonalData(string firstName, string lastName)
+        {
+            PersonalData = new PersonalData(
+                firstName,
+                lastName,
+                PersonalData.Gender,
+                PersonalData.DateOfBirth,
+                PersonalData.Nationality
+            );
+
+            UpdatedAt = DateTime.UtcNow;
+        }
+
+        public void UpdatePassword(string password)
+        {
+            if (string.IsNullOrWhiteSpace(password))
+                throw new ArgumentException("Password cannot be empty.");
+
+            Password = new PasswordHash(password);
+            UpdatedAt = DateTime.UtcNow;
+        }
     }
 }
